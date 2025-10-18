@@ -21,3 +21,11 @@ func TestGetNextID(t *testing.T) {
 		t.Errorf("Expected next ID to be 6, got %d", nextID)
 	}
 }
+
+func TestMarkAsdone(t *testing.T) {
+	task := Task{ID: 1, Title: "Test Task", Completed: false}
+	task.MarkCompleted()
+	if !task.Completed {
+		t.Errorf("Expected task to be marked as done")
+	}
+}
