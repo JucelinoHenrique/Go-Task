@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-const DataFile = "tasks.json"
+var DataFile string = "tasks.json"
 
 func LoadTasks() ([]task.Task, error) {
 	data, err := os.ReadFile(DataFile)
